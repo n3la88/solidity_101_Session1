@@ -8,5 +8,14 @@ contract SimpleStorage {
     int public intNumber;
     string public name;
     address public myAccount;
-    
+    uint public favoriteNumber;
+
+    function store (uint _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+    }
+
+    function getFavoriteNumber() public view returns (uint) {
+        return favoriteNumber;
+    }
+
 }
